@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         label.text = "0"
-        label.font = UIFont(name: "Digital-7", size: 36)
+        label.font = UIFont(name: "Digital-7", size: 38)
         label.sizeToFit()
         
        btn1.layer.cornerRadius = 10
