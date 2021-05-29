@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="digital-7.ttf">
+            <string>Digital-7</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAI-Ak-b2B">
+                                <rect key="frame" x="50" y="94" width="290" height="115"/>
+                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="-1" height="-1"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-Ds-Qqd" userLabel="buttons">
+                                <rect key="frame" x="20" y="215" width="350" height="575"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="t4w-nV-NuT" userLabel="actions">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="111"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQY-lN-6Xg" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.666666666666671" height="111"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="0"/>
+                                                <connections>
+                                                    <action selector="zero:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZVP-mx-Gaw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9By-sv-zMO" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="88.666666666666686" y="0.0" width="84" height="111"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="+/-"/>
+                                                <connections>
+                                                    <action selector="toggleSign:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sim-Dn-ER2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAr-9T-xUO" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="177.66666666666666" y="0.0" width="83.666666666666657" height="111"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <state key="normal" title="%"/>
+                                                <connections>
+                                                    <action selector="perc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3iU-HZ-xZJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKe-4c-72x" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="266.33333333333331" y="0.0" width="83.666666666666686" height="111"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <state key="normal" title="×"/>
+                                                <connections>
+                                                    <action selector="multiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7F7-O5-ZUy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LSe-dw-Hpy" userLabel="789">
+                                        <rect key="frame" x="0.0" y="116" width="350" height="111"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQU-L2-5kz" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.666666666666671" height="111"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="seven:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZU7-he-jhh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gN8-kp-M50" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="88.666666666666686" y="0.0" width="84" height="111"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="eight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TdN-ap-C0e"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOA-xk-zED" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="177.66666666666666" y="0.0" width="83.666666666666657" height="111"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="nine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cry-ml-8po"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxo-5C-uku" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="266.33333333333331" y="0.0" width="83.666666666666686" height="111"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                <state key="normal" title="÷"/>
+                                                <connections>
+                                                    <action selector="divide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tx6-q1-DMb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="p8H-bj-4vW" userLabel="456">
+                                        <rect key="frame" x="0.0" y="232" width="350" height="111"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Vw-oT-p0R" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.666666666666671" height="111"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="four:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mbY-5z-lPr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPV-bG-7Ia" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="88.666666666666686" y="0.0" width="84" height="111"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="five:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NUp-BX-j73"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrp-U0-eSo" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="177.66666666666666" y="0.0" width="83.666666666666657" height="111"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="six:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oLr-iF-ZOG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9QS-Je-c9S" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="266.33333333333331" y="0.0" width="83.666666666666686" height="111"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                                <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="minus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tal-uo-Se9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YyN-TX-WA7" userLabel="123">
+                                        <rect key="frame" x="0.0" y="348" width="350" height="111"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="We7-2U-SXU">
+                                                <rect key="frame" x="0.0" y="0.0" width="83.666666666666671" height="111"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="one:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OcO-98-Shs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYe-Lf-5ni">
+                                                <rect key="frame" x="88.666666666666686" y="0.0" width="84" height="111"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="two:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uQc-0T-X39"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOB-Qg-jfw">
+                                                <rect key="frame" x="177.66666666666666" y="0.0" width="83.666666666666657" height="111"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="three:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wp2-l2-2c4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtG-gY-KpE">
+                                                <rect key="frame" x="266.33333333333331" y="0.0" width="83.666666666666686" height="111"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="summB:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fYP-qa-Gc7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="T4r-pu-ofa" userLabel="btnBottom">
+                                        <rect key="frame" x="0.0" y="464" width="350" height="111"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgi-m2-OGl" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="173" height="111"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Clear"/>
+                                                <connections>
+                                                    <action selector="clearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v2G-ss-c7y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoJ-Rw-FzG" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="178" y="0.0" width="83.666666666666686" height="111"/>
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                                <state key="normal" title="."/>
+                                                <connections>
+                                                    <action selector="punt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ayI-Le-UCQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldF-DW-5Mk" customClass="ButtonWithRoundedCorners" customModule="Calculator4" customModuleProvider="target">
+                                                <rect key="frame" x="266.66666666666669" y="0.0" width="83.333333333333314" height="111"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                                <state key="normal" title="="/>
+                                                <connections>
+                                                    <action selector="equally:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a3X-Mm-lLE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="DoJ-Rw-FzG" firstAttribute="width" secondItem="ldF-DW-5Mk" secondAttribute="width" id="RM2-0s-PG2"/>
+                                            <constraint firstItem="xgi-m2-OGl" firstAttribute="width" secondItem="T4r-pu-ofa" secondAttribute="width" multiplier="0.5" constant="-2" id="oxL-r0-Y8e"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="p8H-bj-4vW" firstAttribute="leading" secondItem="V2b-Ds-Qqd" secondAttribute="leading" id="3eK-g9-b1S"/>
+                                    <constraint firstAttribute="trailing" secondItem="p8H-bj-4vW" secondAttribute="trailing" id="A6P-gR-rBN"/>
+                                    <constraint firstAttribute="trailing" secondItem="t4w-nV-NuT" secondAttribute="trailing" id="AM0-O9-Lh1"/>
+                                    <constraint firstAttribute="trailing" secondItem="LSe-dw-Hpy" secondAttribute="trailing" id="BRz-hU-aDC"/>
+                                    <constraint firstItem="t4w-nV-NuT" firstAttribute="leading" secondItem="V2b-Ds-Qqd" secondAttribute="leading" id="H4A-4C-kxw"/>
+                                    <constraint firstItem="LSe-dw-Hpy" firstAttribute="leading" secondItem="V2b-Ds-Qqd" secondAttribute="leading" id="K3s-W9-KE8"/>
+                                    <constraint firstItem="YyN-TX-WA7" firstAttribute="leading" secondItem="V2b-Ds-Qqd" secondAttribute="leading" id="PaW-Iv-80S"/>
+                                    <constraint firstItem="T4r-pu-ofa" firstAttribute="leading" secondItem="V2b-Ds-Qqd" secondAttribute="leading" id="nCg-w6-OPl"/>
+                                    <constraint firstAttribute="trailing" secondItem="YyN-TX-WA7" secondAttribute="trailing" id="qLQ-w0-qOX"/>
+                                    <constraint firstAttribute="trailing" secondItem="T4r-pu-ofa" secondAttribute="trailing" id="r3J-pV-yH0"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="V2b-Ds-Qqd" firstAttribute="top" secondItem="LAI-Ak-b2B" secondAttribute="bottom" constant="6" id="7jw-N1-ySh"/>
+                            <constraint firstItem="LAI-Ak-b2B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="8ER-dX-xSZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V2b-Ds-Qqd" secondAttribute="bottom" constant="20" id="PwX-av-mwF"/>
+                            <constraint firstItem="LAI-Ak-b2B" firstAttribute="height" secondItem="V2b-Ds-Qqd" secondAttribute="height" multiplier="1/5" id="TZ1-K3-w8c"/>
+                            <constraint firstItem="LAI-Ak-b2B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Y3M-TW-fdP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LAI-Ak-b2B" secondAttribute="trailing" constant="50" id="Zqr-4U-IW4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V2b-Ds-Qqd" secondAttribute="trailing" constant="20" id="jOP-oe-C1E"/>
+                            <constraint firstItem="V2b-Ds-Qqd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wRj-OM-Ubm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btn1" destination="We7-2U-SXU" id="KYL-tr-yOM"/>
+                        <outlet property="btn2" destination="YYe-Lf-5ni" id="1tW-rU-JrZ"/>
+                        <outlet property="btn3" destination="gOB-Qg-jfw" id="Yta-aP-jQZ"/>
+                        <outlet property="btnPl" destination="WtG-gY-KpE" id="hs0-Ep-CAh"/>
+                        <outlet property="label" destination="LAI-Ak-b2B" id="Rj9-IB-k8P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-184.80000000000001" y="60.719640179910051"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
